@@ -1,0 +1,89 @@
+.city-card {
+  background-color: rgba(255, 255, 255, 0.63);
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #181818;
+  animation: up 300ms ease-out;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card-title {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.card-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.icon img{
+  height: 90px;
+  width: 90px;
+}
+
+.temp {
+  font-weight: bold;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.card-footer {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #646464;
+}
+
+@media(min-width: 1100px) {
+  .city-card {
+    background-color: rgba(255, 255, 255, 0.63);
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #181818;  
+    animation: up 300ms ease-out;
+  }
+
+  .card-title {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  .card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .icon img{
+    height: 250px;
+    width: 250px;
+  }
+  
+  .temp {
+    font-weight: bold;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .card-footer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #646464;
+  }
+}
