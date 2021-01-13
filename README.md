@@ -4,6 +4,10 @@
 ![Last-commit][last-commit]
 ![Repo-size][repo-size]
 
+<center>
+  <img src="https://github.com/gllader/weather-app/blob/master/weather-app.gif">
+</center>
+
 Weather app made with:
 
 <ul>
