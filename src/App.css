@@ -55,7 +55,7 @@ input[type='text']:focus {
 @media(min-width: 1100px) {
   .container {
     width: 35%;
-    margin: 200px auto;
+    margin: 150px auto;
     animation: down 300ms ease-out;
     text-align: center;
   }
