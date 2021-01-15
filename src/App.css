@@ -11,11 +11,14 @@ html {
 body {
   font-family: Roboto, sans-serif;
   font-size: 1.8rem;
-
-  background: #457fca;
-  background: -webkit-linear-gradient(to right, #5691c8, #457fca);
-  background: linear-gradient(to right, #5691c8, #457fca);
   color: var(--color-primary);
+}
+
+body {
+  background-color: #192f4a;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23192f4a' cx='50' cy='0' r='50'/%3E%3Cg fill='%2320344e' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23273952' cx='50' cy='100' r='50'/%3E%3Cg fill='%232e3e56' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%2335435a' cx='50' cy='200' r='50'/%3E%3Cg fill='%233b485e' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23424e62' cx='50' cy='300' r='50'/%3E%3Cg fill='%23485366' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%234f596b' cx='50' cy='400' r='50'/%3E%3Cg fill='%23555e6f' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%235c6473' cx='50' cy='500' r='50'/%3E%3Cg fill='%23626977' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23696f7b' cx='50' cy='600' r='50'/%3E%3Cg fill='%236f7580' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23767a84' cx='50' cy='700' r='50'/%3E%3Cg fill='%237c8088' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%2383868d' cx='50' cy='800' r='50'/%3E%3Cg fill='%238a8c91' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23909295' cx='50' cy='900' r='50'/%3E%3Cg fill='%2397989a' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%239e9e9e' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
 }
 
 .container {
@@ -24,6 +27,9 @@ body {
   margin: 70px auto;
   animation: down 300ms ease-out;
   text-align: center;
+  /* display: flex;
+  flex-direction: row;
+  border: 1px solid red; */
 }
 
 @keyframes down {
@@ -36,15 +42,38 @@ body {
   }
 }
 
-input[type='text'] {
-  width: 100%;
+.input-container input {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  width: 30vw;
+  color: white;
   font-size: 1.6rem;
   margin-top: 35px;
-  border: 0;
-  border-bottom: 1px solid var(--color-primary);
-  color: var(--color-primary);
-  background-color: rgba(255, 255, 255, 0);
   text-align: center;
+}
+
+.input-container {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  border-bottom: 1px solid;
+}
+
+.border {
+  border-bottom: 1px solid;
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  top: 100%;
+  background: white;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin:  0% 50%;
+}
+
+input:focus + .border, .input-container:focus .border {
+  transform: scaleX(1);
 }
 
 input[type='text']:focus {

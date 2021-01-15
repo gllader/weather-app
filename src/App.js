@@ -43,9 +43,10 @@ function App() {
     <div className="container">
       <div className="content">
         <form onSubmit={handleFormSubmit}>
-          <div className="input-field">
+          <div className="input-container">
             <label htmlFor="cityName">Enter a city name:</label>
             <input type="text" name="cityName" onChange={handleFilterChange} />
+            <div className="border"></div>
           </div>
         </form>
         {cityData != 0 && <City cityData={cityData}></City>}
